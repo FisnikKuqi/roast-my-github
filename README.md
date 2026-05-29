@@ -11,7 +11,7 @@ It quietly takes notes on the embarrassing stuff — forks with zero original co
 It feeds those notes to Google Gemini, which returns a roast.
 The roast lands in a green box up top. Your profile and repos show below it, as receipts.
 
-Roast styles 🎭
+Roast styles 
 Because one flavor of humiliation isn't enough, there's a dropdown:
 
 Friendly — funny, a little savage, ends with a hug.
@@ -47,7 +47,7 @@ Open http://localhost:3000 and start roasting.
 No API key? The profile fetch and repo list still work fine — only the roast step needs Gemini, and without a key it returns a clean error instead of exploding.
 
 The "it doesn't fall over" details
-Half the work in something like this is the unhappy paths. This handles them so a reviewer (hi 👋) doesn't hit a blank screen:
+Half the work in something like this is the unhappy paths. This handles them so a reviewer (hi) doesn't hit a blank screen:
 
 Username doesn't exist → "No GitHub user called @x. Check the spelling." Not a stack trace.
 Account has no public repos → "Nothing to roast yet." Can't roast an empty fridge.
