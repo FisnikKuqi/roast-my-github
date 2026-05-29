@@ -80,3 +80,14 @@ button:hover {
 button:active {
   background: #1a7f37;
 }
+#results { margin-top: 20px; }
+.msg { color: #aaa; text-align: center; font-size: 14px; }
+.profile { text-align: center; margin-bottom: 16px; }
+.avatar { width: 64px; height: 64px; border-radius: 50%; }
+.profile h2 { margin: 8px 0 2px; font-size: 18px; }
+.sub { color: #888; font-size: 13px; margin: 0; }
+.repos { display: flex; flex-direction: column; gap: 6px; max-height: 240px; overflow-y: auto; }
+.repo { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; background: rgba(255,255,255,0.04); border-radius: 6px; font-size: 13px; }
+.repo-name { font-weight: 600; color: #eee; }
+.repo-meta { color: #888; font-size: 12px; }
+.repo-name { margin-right: 8px; word-break: break-word; }
