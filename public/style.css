@@ -91,3 +91,5 @@ button:active {
 .repo-name { font-weight: 600; color: #eee; }
 .repo-meta { color: #888; font-size: 12px; }
 .repo-name { margin-right: 8px; word-break: break-word; }
+.roast { margin-bottom: 18px; padding: 16px; background: rgba(40,167,69,0.08); border: 1px solid rgba(40,167,69,0.3); border-radius: 8px; }
+.roast-text { margin: 0; font-size: 15px; line-height: 1.5; color: #eee; }

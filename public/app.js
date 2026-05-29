@@ -3,7 +3,6 @@ console.log("ready");
 const input = document.getElementById("username");
 const button = document.getElementById("roastBtn");
 
-// We'll add a results area below the card if it doesn't exist
 let resultsEl = document.getElementById("results");
 if (!resultsEl) {
   resultsEl = document.createElement("div");
@@ -19,7 +18,6 @@ async function handleRoast() {
     return;
   }
 
-  // Loading state
   button.disabled = true;
   resultsEl.innerHTML = `<p class="msg">Digging through @${username}'s repos...</p>`;
 
@@ -41,6 +39,20 @@ async function handleRoast() {
     }
 
     renderProfile(data);
+
+    const roastEl = document.createElement("div");
+    roastEl.className = "roast";
+    roastEl.innerHTML = `<p class="msg">Warming up the roast...</p>`;
+    resultsEl.prepend(roastEl);
+
+    const roastRes = await fetch(`/api/roast/${encodeURIComponent(username)}`);
+    const roastData = await roastRes.json();
+
+    if (roastRes.ok && roastData.roast) {
+      roastEl.innerHTML = `<p class="roast-text">${roastData.roast}</p>`;
+    } else {
+      roastEl.innerHTML = `<p class="msg">Couldn't generate a roast right now. Try again.</p>`;
+    }
   } catch (err) {
     resultsEl.innerHTML = `<p class="msg">Network error. Is the server running?</p>`;
   } finally {
